@@ -20,4 +20,9 @@ export class MainPageComponent {
       power: 7500,
     },
   ];
+
+  //Este metodo se ejecutaria cuando se emita algun evento desde el hijo que este padre lo este escuchando
+  onNewCharacter(character: Character): void {
+    console.log({ character });
+  }
 }
