@@ -8,6 +8,7 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class AddCharacterComponent {
   //Esta seria la forma para poder emitir un evento
+  //Define una salida para el componente que el componente padre puede subscribirse para escuchar
   @Output()
   public onNewCharacter: EventEmitter<Character> = new EventEmitter();
 

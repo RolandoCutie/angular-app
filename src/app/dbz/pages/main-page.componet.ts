@@ -22,7 +22,11 @@ export class MainPageComponent {
   ];
 
   //Este metodo se ejecutaria cuando se emita algun evento desde el hijo que este padre lo este escuchando
+  //Aqui es donde vamos a guardar las cosas
   onNewCharacter(character: Character): void {
-    console.log({ character });
+    this.characters.push(character);
+  }
+  onDeleteCharacter(index: number): void {
+    this.characters.splice(index, 1);
   }
 }
